@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(6, 28, 41);
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+}
+
+.navbar {
+    background-color: rgb(6, 28, 41);
+    color: wheat
+}
+
+.nav-link {
+    color:lightblue;
+}
+
+.btn,
+button {
+    color:lightblue;
+    /* background-color: white; */
+}
+
+.btn-outline-success {
+    border-color: lightblue;
+    
+}
+
+.btn-primary {
+    background-color:  rgb(6, 28, 41);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #f7339e;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+
+.navbar-brand {
+    color: whitesmoke
+}
