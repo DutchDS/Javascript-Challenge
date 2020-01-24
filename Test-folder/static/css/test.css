@@ -6,7 +6,7 @@ body {
 
 .navbar {
     background-color: rgb(6, 28, 41);
-    color: white
+    color: wheat
 }
 
 .nav-link {
@@ -36,25 +36,9 @@ button {
 
 #table-area,
 .navbar-brand {
-    color:white;
+    color: whitesmoke
 }
 
 h1 {
     color: white;
 }
-
-#lat-img {
-    background-image: url("static/images/NY_Cool.jpg");
-}
-
-.m-top-175 {
-    margin-top: 30%;
-    margin-bottom: 100%;
-  }
-
-.m-top-75 {
-    margin-top: 75px;
-    background-color:rgb(6, 28, 41) ;
-    opacity: 75%;
-    color: white;
-  }

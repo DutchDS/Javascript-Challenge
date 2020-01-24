@@ -15,10 +15,10 @@
 </head>
 
 <body>
-  <div style="background-image:url(static/images/NY_Cool.jpg); background-attachment: fixed; background-size:cover;">
+  <div style="background-image:url(static/images/NY_Cool.jpg); background-attachment: fixed; background-size: 100%; opacity: .75;">
 
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="index.html">UFO Sightings</a>
+      <a class="navbar-brand" href="#">UFO Sightings</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       >
         <span class="navbar-toggler-icon"></span>
@@ -33,17 +33,14 @@
             <a class="nav-link" href="#">Link</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index_all.html">
               <button id="get-all" type="submit" class="btn btn-primary btn-outline-success">Get all Sightings!</button>
-            </a>
-            </li>
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <a class="nav-link" href="index_select.html">
-            <label for="datetime-form"></label>
-            <input class="form-control mr-sm-2"  id="datetime-form-input" type="text" placeholder="1/11/2010" name="date-form">
-            <button id="submit" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
-          </a>
+          <label for="datetime-form"></label>
+          <input class="form-control mr-sm-2"  id="datetime-form-input" type="text" placeholder="1/11/2010" name="date-form">
+          <!-- <button class="btn btn-primary btn-outline-success" type="submit">Search for Specific Date</button> -->
+          <button id="submit" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
         </form>
       </div>
     </nav>
@@ -51,19 +48,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-sm-12">
-            <!-- <section id="figure"> -->
+            <section id="figure">
               <!-- <img width=100% id="lat-image" src="static/images/NY_Cool.jpg"> -->
               <div class="panel m-top-175">
                 <div class="panel-body">
-                  <h1 class="text-center">The truth is out there!!!</h1>
+                  <h1 class="text-center">The truth it out there!!!</h1>
                 </div>
               </div>
-          <!-- </section> -->
+          </section>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
 
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-lg-12 col-sm-12">
           <h1>Sightings summary</h1>
               <ul class="summary"></ul>
@@ -85,7 +82,8 @@
           </table>
         </div>
       </div>
-    </div> -->
+    </div>
+  </div>
   </div>
 </body>
 <script src="static/js/data.js"></script>
