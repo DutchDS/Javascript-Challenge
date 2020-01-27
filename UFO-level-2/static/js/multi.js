@@ -3,12 +3,15 @@
 var submit_all = d3.select("#submit-all");
 var get_all = d3.select("#get-all");
 var tableData = data;
-var inputValue = d3.select("datetime-form-input")
-
+// var inputValue = d3.select("datetime-form-input")
+var inputDate = d3.select("#select-date-from-list")
+var inputCity = d3.select("#select-city-from-list")
+var inputState = d3.select("#select-state-from-list")
+var inputCountry = d3.select("#select-country-from-list")
+var inputShape = d3.select("#select-shape-from-list")
 
 // Load initial results
 // ####################
-
 load_all()
 
 // Two functions that will be used on this page
@@ -67,9 +70,78 @@ function load_all() {
 
 // Define what to do when 'get all sightings' date is clicked
 //###########################################################
-get_all.on("click", function() {load_all()});
+// get_all.on("click", function() {load_all()});
 
   
 // Define what to do when 'search for specific date' is clicked
 // #################################################################
-submit_all.on("click", function() {load_select()});
+// submit_all.on("click", function() {load_select()});
+
+// Create empty arrays to store each list of values
+var listDates = [];
+var listCities = [];
+var listStates = [];
+var listCountries = [];
+var listShapes = [];
+
+// Iterate through each recipe object
+
+tableData.forEach((r) => {
+  listDates.push(r.datetime);
+  listCities.push(r.city);
+  listStates.push(r.state);
+  listCountries.push(r.country);
+  listShapes.push(r.shape)
+})
+
+function uniqueValues(myList) {
+    var longList = myList;
+    var shortList = [];
+  
+    // Iterate through the array
+    for (var i = 0; i < longList.length; i++) {
+        var currentWord = longList[i];
+        if (shortList.indexOf(currentWord) == -1) {
+            shortList.push(currentWord);
+            } 
+        }  
+    // console.log(shortList);
+    return shortList;
+  }
+
+shortDates = uniqueValues(listDates);
+shortCities = uniqueValues(listCities);
+shortStates = uniqueValues(listStates);
+shortCountries = uniqueValues(listCountries);
+shortShapes = uniqueValues(listShapes);
+
+console.log(shortDates);
+console.log(shortCities);
+console.log(shortStates);
+console.log(shortCountries);
+console.log(shortShapes);
+
+function loadDropDowns(myId, myshortList, myText) {
+    // var tbody = d3.select("tbody");
+    var inputDate = d3.select(myId) 
+   
+    inputDate.html(" ");
+  
+    console.log(myshortList);
+    var cell = inputDate.append("option").text(myText);
+    
+    myshortList.forEach((f) => {
+      console.log(f);
+      var cell = inputDate.append("option")
+      cell.text(f);
+  
+      });
+    };
+  
+loadDropDowns("#selectDate",shortDates,"Select Date");
+loadDropDowns("#selectCity",shortCities,"Select City");
+loadDropDowns("#selectState",shortStates,"Select State");
+loadDropDowns("#selectCountry",shortCountries,"Select Country");
+loadDropDowns("#selectShape",shortShapes,"Select Shape");
+  
+

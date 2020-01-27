@@ -16,7 +16,6 @@
 
 <body>
   <div style="background-image:url(static/images/NY_Cool.jpg); background-attachment: fixed; background-size: cover">
-
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="index.html">UFO Sightings</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,17 +34,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
+            <a class="nav-link" href="index_all.html">
               <button id="get-all" type="submit" class="btn btn-primary btn-outline-success">Get all Sightings!</button>
+            </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <label for="datetime-form"></label>
-            <input class="form-control mr-sm-2 active"  id="datetime-form-input" type="text" placeholder="1/1/2010" name="date-form">
-            <div class="nav-item">
-              <a class="nav-link" href="index_all.html">
-              <button id="submit-all" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
-              </a>
+
+        <form class="navbar-form form-inline" action="index_all.html">
+            <div class="form-group">
+              <input class="form-control mr-sm-2" id="datetime-form-input" type="text" placeholder="1/1/2010" name="date-form">
             </div>
+            <a class="nav-link" href="index_all.html">
+              <button id="submit-all" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
+            </a>
         </form>
       </div>
     </nav>
