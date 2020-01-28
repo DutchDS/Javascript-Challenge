@@ -17,13 +17,15 @@
 <body>
   <div style="background-image:url(static/images/NY_Cool.jpg); background-attachment: fixed; background-size: cover">
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-sm">
       <a class="navbar-brand" href="index.html">UFO Sightings</a>
+      <div class="d-flex flex-row order-2 order-lg-3">
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="index_multi.html">
@@ -31,43 +33,16 @@
             </a>
           </li>
         </ul>
-          <!-- <script src="https://code.jquery.com/jquery-1.6.4.min.js"></script> -->
           <select class="form-control" id="selectDate" name="select-date-from-list">
-              <option label="Select Date"></option>
-              <option>5-9</option>
-              <option>10-15</option>
-              <option>16-20</option>
-              <option>20+</option>    
           </select>
-          <select class="form-control" id="selectCity" name="select-city-from-list">
-            <option label="Select City"></option>
-\            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">C</option>
-            <option value="4">D</option>    
+          <select class="form-control " id="selectCity" name="select-city-from-list">
           </select>
           <select class="form-control" id="selectState" name="select-state-from-list">
-            <option label="Select State"></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>    
           </select>
           <select class="form-control" id="selectCountry" name="select-country-from-list">
-            <option label="Select Country"></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>    
           </select>          
           <select class="form-control" id="selectShape" name="select-shape-from-list">
-            <option label="Select Shape"></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>    
           </select>
-<div class="test"></div>
       </div>
     </nav>
 
