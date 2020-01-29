@@ -8,7 +8,7 @@
   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/test.css">
+    <link rel="stylesheet" href="static/css/style.css">
 
     <title>UFO Sightings</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -22,15 +22,8 @@
         <span class="navbar-toggler-icon"></span>
       </button> -->
     
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index_multi.html">
-              <button id="get-all" type="submit" class="btn btn-primary btn-outline-success">Multiple Selections</button>
-            </a>
-          </li>
-        </ul>
-        
+<!-- 
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -39,28 +32,53 @@
             </a>
           </li>
         </ul>
-
         <form class="navbar-form form-inline" action="index_all.html">
-            <!-- <div class="form-group"> -->
-              <!-- <input class="form-control mr-sm-2" id="datetime-form-input" type="text" placeholder="1/1/2010" name="date-form"> -->
-              <!-- <input class="form-control mr-sm-2" id="datetime-form-input" type="text" name="date-form"> -->
-              <select class="form-control" id="selectDate" name="select-date-from-list">
-              </select>
-            <!-- </div> -->
-            <a class="nav-link" href="index_all.html">
-              <button id="submit-all" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
-            </a>
+          <select class="form-control" id="selectDate" name="select-date-from-list">
+          </select>
+          <a class="nav-link" href="index_all.html">
+            <button id="submit-all" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
+          </a>
         </form>
       </div>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent"> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index_multi.html">
+              <button id="get-all" type="submit" class="btn btn-primary btn-outline-success">UFO Sightings Level 2</button>
+            </a>
+          </li>
+        </ul>
+      <!-- </div> -->
+
     </nav>
 
     <div class="container">
-
+        <div class="panel m-top-75">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-3 col-xs-12">
+                <a href="index_all.html">
+                  <button id="get-all" type="submit" class="btn btn-primary btn-outline-success">Get all Sightings!</button>
+                </a>
+              </div>
+              <div class="col-3 col-xs-6">
+                <select class="form-control" id="selectDate" name="select-date-from-list">
+                </select>
+              </div>
+              <div class="col-3 col-xs-6" id="col-xs">
+                <button id="submit-all" type="submit" class="btn btn-primary btn-outline-success">Search for Specific Date</button>
+              </div>
+            </div>
+          </div>
+      </div>
+  
     <div class="row">
       <div class="col-lg-12 col-sm-12">
         <div class="panel m-top-75">
           <div class="panel-body">
-          <h1>Sightings summary</h1>
+            
+           <h1>Sightings summary</h1>
               <ul class="summary"></ul>
           <br>
           <div id="table-area" class="">
