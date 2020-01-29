@@ -64,7 +64,7 @@ h1 {
     color: white;
   }
 
-  #selectDate, #selectCity, #selectCountry, #selectState, #selectShape {
+  #selectDate, #selectCity, #selectCountry, #selectState, #selectShape, #datetime-form-input {
       background-color: lightblue;
       color: black;
       margin: 5px;

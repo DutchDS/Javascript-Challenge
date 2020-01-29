@@ -44,9 +44,9 @@ tableData.forEach((r) => {
   listStates.push(r.state);
   listCountries.push(r.country);
   listShapes.push(r.shape)
-})
+});
 
-// Go through each list and create a short list by removing duplicates
+// Function to go through each list and create a short list by removing duplicates
 function uniqueValues(myList) {
     var longList = myList;
     var shortList = [];
@@ -62,6 +62,7 @@ function uniqueValues(myList) {
     return shortList;
   }
 
+// Call functions and sort results
 shortDates = uniqueValues(listDates);
 shortCities = uniqueValues(listCities).sort();
 shortStates = uniqueValues(listStates).sort();
@@ -91,20 +92,15 @@ function loadDropDowns(myId, myshortList, myText) {
   
       });
     };
+
+// Fill dropdowns with shortLists
 loadDropDowns("#selectDate",shortDates,"Select Date");
 loadDropDowns("#selectCity",shortCities,"Select City");
 loadDropDowns("#selectState",shortStates,"Select State");
 loadDropDowns("#selectCountry",shortCountries,"Select Country");
 loadDropDowns("#selectShape",shortShapes,"Select Shape");
 
-
-get_date.on("change", function() {load_select("#selectDate", "Date")});
-get_city.on("change", function() {load_select("#selectCity", "City")});
-get_state.on("change", function() {load_select("#selectState", "State")});
-get_country.on("change", function() {load_select("#selectCountry", "Country")});
-get_shape.on("change", function() {load_select("#selectShape", "Shape")});
-
-// Lastly Filter result set when a filter is chosen from the dropdownboxes
+// Lastly define what filter to apply to remaining dataset after chosing value from dropdownboxes
 function load_select(myId, myField) {
       // d3.event.preventDefault();
 
@@ -139,6 +135,11 @@ function load_select(myId, myField) {
           cell.text(value);
         });
       });
-    
-  
     }
+
+    // Define what to do when value is selected/changed
+get_date.on("change", function() {load_select("#selectDate", "Date")});
+get_city.on("change", function() {load_select("#selectCity", "City")});
+get_state.on("change", function() {load_select("#selectState", "State")});
+get_country.on("change", function() {load_select("#selectCountry", "Country")});
+get_shape.on("change", function() {load_select("#selectShape", "Shape")});
