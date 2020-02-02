@@ -1,4 +1,5 @@
-Week 14: Introduction into JavaScript
+#Week 14: Introduction into JavaScript
+By A. Rijpkema 1/29/2020
 
 The UFO Sightings website makes use of a data script that contains about 2 weeks worth of UFO Sightings within the USA. A slick starter page was provided, but I didn't use it and started building mine from scratch. The assignment was split between level 1 and level 2. Both levels are incorporated into one website. Please start it here: [UFO Sightings](https://dutchds.github.io/UFO-Level-1-and-2/index.html) or clone this repo.
 
